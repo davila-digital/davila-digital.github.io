@@ -1,0 +1,36 @@
+[data-drupal-admin-styles] :where(nav li)::before {
+    /* float: none; */
+    content: none;
+}
+[data-drupal-admin-styles] .toolbar-button {
+    padding-inline: 10px;
+    padding-block: calc((16px / 1rem) * .5rem + 1px);
+    /* min-height: calc((16px / 1rem) * var(--admin-toolbar-space-40)); */
+    min-height: unset;
+}
+[data-drupal-admin-styles].top-bar {
+    /* min-height: 54px; */
+    height: auto;
+    /* block-size: calc(var(--admin-toolbar-top-bar-height) * (16px / 1rem)); */
+    /* padding-inline: calc(var(--drupal-displace-offset-left, var(--admin-toolbar-sidebar-width)) + var(--admin-toolbar-space-32)) var(--admin-toolbar-space-32); */
+    padding-inline: calc(var(--admin-toolbar-sidebar-width) + (16px / 1rem) * 1rem)
+                    calc((16px / 1rem) * 1rem);
+    padding-block: calc((16px / 1rem) * .125rem);
+
+
+}
+[data-toolbar-popover-wrapper] {
+    padding: 
+        calc((16px / 1rem) * var(--admin-toolbar-space-12))
+        calc((16px / 1rem) * var(--admin-toolbar-space-16))
+        calc((16px / 1rem) * var(--admin-toolbar-space-16));
+}
+:where([data-drupal-admin-styles]) {
+  /* --pico-font-size: 16px !important; 
+  font-size: 1rem !important; */
+}
+
+[data-drupal-admin-styles] * {
+    line-height: calc((16px / 1rem) *var(--admin-toolbar-line-height-info-sm));
+    font-size: calc((16px / 1rem) * var(--admin-toolbar-font-size-info-sm));
+}
