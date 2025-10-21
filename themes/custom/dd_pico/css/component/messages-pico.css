@@ -1,0 +1,55 @@
+
+/* Experimental: CSS-only checkbox hider */
+/* .pico .messages:has(.message-toggle[type=checkbox]) {
+    display: none;
+}
+.pico .messages:has(.message-toggle[type=checkbox]:checked) {
+    display: block;
+}
+.pico .messages .message-toggle[type=checkbox] {
+    float: right;
+} */
+
+
+
+/* Message Colors */
+
+.pico .messages {
+        color: var(--pico-contrast);
+    }
+
+html[data-theme='light'] { 
+    & .pico .messages {
+
+    }
+    & .pico .messages--status {
+        background-color: var(--pico-color-lime-150);
+    }
+    & .pico .messages--warning {
+        background-color: var(--pico-color-amber-100);
+    }
+    & .pico .messages--error {
+        background-color: var(--pico-color-pink-300);
+    }
+    & .pico .messages__item {
+        /* background-color: var(--pico-color-zinc-100); */
+    }
+}
+
+html[data-theme='dark'] { 
+    & .pico .messages {
+
+    }
+    & .pico .messages--status {
+        background-color: var(--pico-color-green-650);
+    }
+    & .pico .messages--warning {
+        background-color: var(--pico-color-pumpkin-700);
+    }
+    & .pico .messages--error {
+        background-color: var(--pico-color-red-700);
+    }
+    & .pico .messages__item {
+        /* background-color: var(--pico-color-zinc-550); */
+    }
+}

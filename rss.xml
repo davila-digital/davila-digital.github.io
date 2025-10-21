@@ -1,11 +1,19 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_rss' -->
+<!-- BEGIN OUTPUT from 'core/modules/views/templates/views-view-rss.html.twig' -->
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://davila-digital.github.io/">
+<rss version="2.0" xml:base="https://davila-digital.github.io/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Davila Digital</title>
+    <title>Davila Digital - User Experience・Digital Strategy・Web Architecture</title>
     <link>https://davila-digital.github.io/</link>
-    <description/>
+    <description></description>
     <language>en</language>
     
     
   </channel>
 </rss>
+
+<!-- END OUTPUT from 'core/modules/views/templates/views-view-rss.html.twig' -->
+

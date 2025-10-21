@@ -1,0 +1,42 @@
+.pico .pico-root {
+  container-name: pico-root;
+  container-type: size;
+}
+
+@container pico-root (min-width: 576px) {
+  .pico div.pico-root > header,
+  .pico div.pico-root > main,
+  .pico div.pico-root > footer {
+    max-width: 510px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@container pico-root  (min-width: 768px) {
+  .pico div.pico-root > header,
+  .pico div.pico-root > main,
+  .pico div.pico-root > footer {
+    max-width: 700px;
+  }
+}
+@container pico-root (min-width: 1024px) {
+  .pico div.pico-root > header,
+  .pico div.pico-root > main,
+  .pico div.pico-root > footer {
+    max-width: 950px;
+  }
+}
+@container pico-root (min-width: 1280px) {
+  .pico div.pico-root > header,
+  .pico div.pico-root > main,
+  .pico div.pico-root > footer {
+    max-width: 1200px;
+  }
+}
+@container pico-root (min-width: 1536px) {
+  .pico div.pico-root > header,
+  .pico div.pico-root > main,
+  .pico div.pico-root > footer {
+    max-width: 1450px;
+  }
+}

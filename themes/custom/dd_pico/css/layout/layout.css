@@ -1,0 +1,27 @@
+div[role="group"] {
+    &.layout-builder__region,
+    &.layout-builder__section {
+        display: block;
+    }
+}
+/* div.layout-builder__region[role=group] {
+    display: block;
+}
+
+div.layout-builder__section[role=group] {
+    display: block;
+} */
+.layout-builder-form .form-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns for the inputs */
+    grid-template-rows: auto auto; /* Create two rows */
+    column-gap: 1rem;
+
+    input {
+        grid-row: 1; /* Place all inputs in the first row */
+    }
+    #edit-preview-toggle {
+        grid-row: 2; /* Place the toggle in the second row */
+        grid-column: 1 / span 3; /* Make it span across all 3 columns */
+    }
+}

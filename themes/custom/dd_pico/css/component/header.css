@@ -1,0 +1,12 @@
+.pico .site-name {
+  --pico-font-size: 1.5rem;
+  --pico-line-height: 1.175;
+  --pico-typography-spacing-top: 2.25rem;
+    font-size: var(--pico-font-size);
+}
+.pico .site-slogan {
+  --pico-font-size: 1.125rem;
+  --pico-line-height: 1.225;
+  --pico-typography-spacing-top: 1.6875rem;
+    font-size: var(--pico-font-size);
+}

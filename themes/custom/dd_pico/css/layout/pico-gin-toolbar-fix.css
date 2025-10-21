@@ -25,12 +25,21 @@
         calc((16px / 1rem) * var(--admin-toolbar-space-16))
         calc((16px / 1rem) * var(--admin-toolbar-space-16));
 }
-:where([data-drupal-admin-styles]) {
-  /* --pico-font-size: 16px !important; 
-  font-size: 1rem !important; */
-}
 
 [data-drupal-admin-styles] * {
     line-height: calc((16px / 1rem) *var(--admin-toolbar-line-height-info-sm));
     font-size: calc((16px / 1rem) * var(--admin-toolbar-font-size-info-sm));
+}
+
+[data-drupal-admin-styles] .admin-toolbar__content {
+    padding:
+        calc((16px / 1rem) * var(--admin-toolbar-sidebar-header))
+        calc((16px / 1rem) * var(--gin-spacing-s))
+        calc((16px / 1rem) * var(--gin-spacing-s))
+        calc((16px / 1rem) * var(--gin-spacing-s));
+    gap: calc((16px / 1rem) *var(--admin-toolbar-space-12));
+    padding-block:
+        calc((16px / 1rem) *var(--admin-toolbar-sidebar-header))
+        calc((16px / 1rem) *var(--admin-toolbar-space-16));
+    padding-inline: calc((16px / 1rem) * var(--admin-toolbar-space-16));
 }

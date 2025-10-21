@@ -1,0 +1,4 @@
+/* contextual button size fix */
+.pico .contextual .trigger {
+        padding: 0;
+}
