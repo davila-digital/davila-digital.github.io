@@ -6,34 +6,84 @@
   display: grid;
   grid-template-areas: "stack";
 }
-
+.parallax-hero::after,
 .parallax-hero > * {
+  --parallax-factor: 1;
   grid-area: stack;
-  animation: parallax linear;
+  animation: parallax cubic-bezier(0.3, 0, 0, 0);
+  /* animation: parallax linear; */
   animation-timeline: scroll();
   height: 60%;
 }
-.parallax-img {
-  --parallax-speed: -10;
-
-  z-index: -1;
-  /* min-height: 100%; */
-  width: 100%;
+.parallax-hero img.parallax-hero-fade,
+.parallax-hero img.parallax-hero-img {
+  z-index: -2;
   object-fit: cover;
+  margin-left: calc(.5*(var(--pico-root-container-width) - 100cqi));
+  width: 100cqi;
+  max-width: 100cqi;
 }
-div:has(div > .parallax-hero) + * {
+.parallax-hero img.parallax-hero-fade {
+  z-index: -1;
+  opacity: 0.2;
+  --opacity-factor: 1;
+  animation: opacity cubic-bezier(0.3, 0, 0, 0);
+  animation-timeline: scroll();
+}
+
+div:has(> div > .parallax-hero) + * {
   position: relative;
   /* z-index: 1; */
-  top: -20vw;
+  top: -30cqi;
+  left: calc(-1.75 * var(--pico-spacing));
+  width: calc(var(--pico-root-container-width) + var(--pico-spacing) * 3.5);
+  padding-top: calc(1.75 * var(--pico-spacing));
+  padding-left: calc(1.75 * var(--pico-spacing));
+  padding-right: calc(1.75 * var(--pico-spacing));
+  border-radius: calc(.3 * var(--pico-spacing));
   background-color: var(--pico-background-color);
-  padding-top: var(--pico-spacing);
+  opacity: .9;
+}
+
+.parallax-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: calc(.5*(var(--pico-root-container-width) - 100cqi));
+  width: 100cqi;
+  max-width: 100cqi;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0, 0) 50%,
+    var(--pico-background-color) 100%
+  );
 }
 
 @keyframes parallax {
   to {
-    transform: 
-      translateY(calc(var(--parallax-speed) * 60px));
+    transform:
+      /* translateY(calc(var(--parallax-speed) * 60px));  */
+      translateY(calc(100% * var(--parallax-factor)));
+    }
+}
+@keyframes opacity {
+  from {
+    opacity: .2;
+    transform: translateY(0);
   }
+  50% {
+    opacity: var(--opacity-factor);
+  }
+  to {
+    opacity: var(--opacity-factor);
+      transform:
+      /* translateY(calc(var(--parallax-speed) * 60px));  */
+      translateY(calc(100% * var(--parallax-factor)));  
+  }
+    
 }
 
 .pico-root:has(.parallax-hero) header {
