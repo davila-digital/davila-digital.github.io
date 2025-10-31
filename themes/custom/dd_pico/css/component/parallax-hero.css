@@ -50,6 +50,7 @@ div:has(> div > .parallax-hero) + * {
   position: absolute;
   bottom: 0;
   left: 0;
+  top: 1px;
   margin-left: calc(.5*(var(--pico-root-container-width) - 100cqi));
   width: 100cqi;
   max-width: 100cqi;
@@ -71,10 +72,10 @@ div:has(> div > .parallax-hero) + * {
 }
 @keyframes opacity {
   from {
-    opacity: .2;
+    opacity: 0;
     transform: translateY(0);
   }
-  50% {
+  40% {
     opacity: var(--opacity-factor);
   }
   to {
