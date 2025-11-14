@@ -34,7 +34,7 @@
 div:has(> div > .parallax-hero) + * {
   position: relative;
   /* z-index: 1; */
-  top: -30cqi;
+  margin-top: -30cqi;
   left: calc(-1.75 * var(--pico-spacing));
   width: calc(var(--pico-root-container-width) + var(--pico-spacing) * 3.5);
   padding-top: calc(1.75 * var(--pico-spacing));
